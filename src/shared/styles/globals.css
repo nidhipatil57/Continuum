@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-gradient: linear-gradient(135deg, #2d6bfa 0%, #22d3ee 50%, #8b5cf6 100%);
+    --color-brand-gradient-subtle: linear-gradient(135deg, rgba(45, 107, 250, 0.08) 0%, rgba(34, 211, 238, 0.08) 50%, rgba(139, 92, 246, 0.08) 100%);
+    --sidebar-width: 220px;
+    --header-height: 56px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-text-primary bg-surface;
+    line-height: 1.5;
+  }
+
+  .dark body {
+    @apply text-text-dark-primary bg-surface-dark;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-border-strong rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-text-tertiary;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-surface-dark-border;
+  }
+
+  /* Focus visible */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-brand-100 text-brand-900;
+  }
+
+  .dark ::selection {
+    @apply bg-brand-900 text-brand-100;
+  }
+}
+
+@layer components {
+  .brand-gradient-text {
+    background: var(--color-brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .brand-gradient-bg {
+    background: var(--color-brand-gradient);
+  }
+
+  .brand-gradient-border {
+    border-image: var(--color-brand-gradient) 1;
+  }
+
+  .animate-in {
+    @apply animate-fade-in;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

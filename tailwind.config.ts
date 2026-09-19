@@ -1,0 +1,135 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './src/**/*.{ts,tsx,html}',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+      },
+      colors: {
+        brand: {
+          50: '#eef4ff',
+          100: '#d9e6ff',
+          200: '#bbd4ff',
+          300: '#8bb8ff',
+          400: '#5490ff',
+          500: '#2d6bfa',
+          600: '#1a4fef',
+          700: '#133cdc',
+          800: '#1632b2',
+          900: '#182e8c',
+          950: '#121e55',
+        },
+        cyan: {
+          50: '#ecfeff',
+          100: '#cffafe',
+          200: '#a5f3fc',
+          300: '#67e8f9',
+          400: '#22d3ee',
+          500: '#06b6d4',
+          600: '#0891b2',
+          700: '#0e7490',
+          800: '#155e75',
+          900: '#164e63',
+          950: '#083344',
+        },
+        violet: {
+          50: '#f5f3ff',
+          100: '#ede9fe',
+          200: '#ddd6fe',
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed',
+          700: '#6d28d9',
+          800: '#5b21b6',
+          900: '#4c1d95',
+          950: '#2e1065',
+        },
+        surface: {
+          DEFAULT: '#ffffff',
+          secondary: '#f9fafb',
+          tertiary: '#f3f4f6',
+          border: '#e5e7eb',
+          'border-strong': '#d1d5db',
+        },
+        'surface-dark': {
+          DEFAULT: '#0f1117',
+          secondary: '#161923',
+          tertiary: '#1e2130',
+          border: '#2a2d3a',
+          'border-strong': '#3a3d4a',
+        },
+        text: {
+          primary: '#111827',
+          secondary: '#6b7280',
+          tertiary: '#9ca3af',
+          inverse: '#f9fafb',
+        },
+        'text-dark': {
+          primary: '#f9fafb',
+          secondary: '#9ca3af',
+          tertiary: '#6b7280',
+          inverse: '#111827',
+        },
+        status: {
+          confirmed: '#10b981',
+          proposed: '#f59e0b',
+          unverified: '#f97316',
+          conflicting: '#ef4444',
+          rejected: '#6b7280',
+          outdated: '#9ca3af',
+        },
+      },
+      fontSize: {
+        '2xs': ['0.625rem', { lineHeight: '0.875rem' }],
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '6px',
+        'md': '8px',
+        'lg': '12px',
+      },
+      boxShadow: {
+        'soft': '0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04)',
+        'medium': '0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05)',
+        'strong': '0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04)',
+        'overlay': '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.15s ease-out',
+        'slide-up': 'slideUp 0.2s ease-out',
+        'slide-down': 'slideDown 0.2s ease-out',
+        'slide-in-right': 'slideInRight 0.2s ease-out',
+        'scale-in': 'scaleIn 0.15s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(8px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-8px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(16px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
