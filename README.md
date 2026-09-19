@@ -2,7 +2,7 @@
 
 > **AI Context OS — One Project. Every AI. Zero Context Loss.**
 
-![Continuum Architecture & Flow](./continuum-overview.jpg)
+<img src="./continuum-overview.jpg" height=70% width=80%></img>
 
 **Continuum** is a browser extension that acts as a universal context memory layer for developers, researchers, and creators using multiple AI platforms. When switching between ChatGPT, Claude, Gemini, Perplexity, DeepSeek, and other LLMs, project context usually gets lost or fragmented. Continuum captures, structures, and compiles your project's decisions, requirements, constraints, and research into a single canonical source of truth—delivering model-optimized context handoffs with zero privacy leaks.
 
@@ -49,15 +49,6 @@ Continuum is built with modern, high-performance web standards:
 
 ---
 
-## ⌨️ Keyboard Shortcuts
-
-| Shortcut | Action |
-| :--- | :--- |
-| `Alt + C` | Toggle Continuum Side Panel |
-| `Ctrl + Shift + Space` | Open Command Palette |
-| `Ctrl + Shift + C` | Capture Conversation |
-
----
 
 ## 🛠️ Installation & Setup
 
@@ -66,29 +57,6 @@ Continuum is built with modern, high-performance web standards:
 - [Node.js](https://nodejs.org/) (v18 or higher recommended)
 - `npm` or `pnpm` / `yarn`
 - Chrome or Chromium-based browser (Brave, Edge, Arc)
-
-### Local Development Setup
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/continuum.git
-   cd continuum
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start development build** (with HMR):
-   ```bash
-   npm run dev
-   ```
-
-4. **Build production bundle**:
-   ```bash
-   npm run build
-   ```
 
 ### Loading Extension into Chrome
 
@@ -123,17 +91,15 @@ Continuum/
 │   └── sidepanel/             # Full React Sidepanel Application (Pages, Store, Components)
 ```
 
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+| :--- | :--- |
+| `Alt + C` | Toggle Continuum Side Panel |
+| `Ctrl + Shift + Space` | Open Command Palette |
+| `Ctrl + Shift + C` | Capture Conversation |
+
 ---
-
-## 🧪 Development Scripts
-
-- `npm run dev`: Start Vite development server with hot module replacement.
-- `npm run build`: Compile TypeScript and build production extension package into `dist/`.
-- `npm run test`: Run unit test suite using Vitest.
-- `npm run test:watch`: Run Vitest in watch mode.
-- `npm run lint`: Run ESLint check across source files.
-- `npm run format`: Format source code using Prettier.
-
 ---
 
 ## 📄 License
